@@ -1,0 +1,30 @@
+{
+  "name": "breeze-skin",
+  "version": "2.0.0",
+  "description": "Breeze osu skin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "breeze",
+    "osu",
+    "skin",
+    "v2",
+    "m",
+    "-_m_-",
+    "osugerman"
+  ],
+  "author": "Merlin Reichwald",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-flatten": "^0.4.0",
+    "gulp-responsive": "^2.11.0",
+    "gulp-zip": "^4.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
