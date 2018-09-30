@@ -24,6 +24,11 @@ gulp.task('retina',function(){
     .pipe(gulp.dest('Build'));
 });
 
+gulp.task('files', function(){
+  return gulp.src(['Source/**/*','!Source/**/*.{jpg,png,ini,zip,xcf}'])
+    .pipe(gulp.dest('Build'));
+});
+
 gulp.task('config', function(){
   return gulp.src('Source/**/*.ini')
     .pipe(concat('skin.ini'))
@@ -48,7 +53,7 @@ gulp.task('install',gulp.series('install-clean',function(){
   return gulp.src('Out/**/*').pipe(gulp.dest(SKIN_PATH))
 }));
 
-gulp.task('default', gulp.series('clean','retina','config','flatten','zip'));
+gulp.task('default', gulp.series('clean','retina','config','files','flatten','zip'));
 gulp.task('watch-install', () => {
   return gulp.watch('Source/**/*',gulp.series('default','install'));
 });
